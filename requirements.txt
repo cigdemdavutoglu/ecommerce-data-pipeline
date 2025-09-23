@@ -6,3 +6,9 @@ pyspark==3.4.1
 kafka-python==2.0.2
 psycopg2-binary==2.9.9
 pandas==2.0.3
+pytest
+pytest-cov
+pytest-html
+pydantic
+kafka-python
+pyspark
