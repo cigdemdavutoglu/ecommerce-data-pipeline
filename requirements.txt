@@ -12,3 +12,5 @@ pytest-html
 pydantic
 kafka-python
 pyspark
+pytest-timeout
+
