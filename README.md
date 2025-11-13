@@ -110,5 +110,5 @@ dags/spark_streaming_dag.py: Spark scriptini çalıştırmak için Airflow DAG�
 
 ## Lisans
 
-Bu proje MIT lisansı ile lisanslanmıştır.
+ Bu proje MIT lisansı ile lisanslanmıştır.
 
