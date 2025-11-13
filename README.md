@@ -72,7 +72,7 @@ http://localhost:1502
 
 ---
 
-### **CI/CD ve Docker Hub**
+## CI/CD ve Docker Hub
 
 Bu proje, GitHub Actions kullanarak Docker image’larını otomatik olarak build ve Docker Hub’a push eder.
 
@@ -94,7 +94,7 @@ docker run -it cigdemdavutoglu/producer:latest
 
 ---
 
-### **Ne İşe Yarar?**
+## Ne İşe Yarar?
 
 src/producer.py: Kafka’ya örnek veri gönderir
 
@@ -108,7 +108,7 @@ dags/spark_streaming_dag.py: Spark scriptini çalıştırmak için Airflow DAG�
 
 ---
 
-### **Lisans**
+## Lisans
 
 Bu proje MIT lisansı ile lisanslanmıştır.
 
