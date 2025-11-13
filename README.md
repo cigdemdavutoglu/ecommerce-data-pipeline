@@ -47,7 +47,7 @@ requirements.txt -> Python bağımlılıkları
 
 1. Repo’yu klonlayın:
 
-'''
+```bash
 git clone https://github.com/cigdemdavutoglu/ecommerce-data-pipeline.git
 cd ecommerce-data-pipeline
 
@@ -69,7 +69,7 @@ docker-compose up -d
 http://localhost:1502
 
 6. spark_streaming_dag DAG’ını etkinleştirin ve tetikleyin. Spark uygulaması Kafka’dan verileri okuyup PostgreSQL’e yazacaktır.
-'''
+```
 ---
 
 ## CI/CD ve Docker Hub
