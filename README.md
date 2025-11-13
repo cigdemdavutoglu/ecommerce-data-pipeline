@@ -50,26 +50,27 @@ requirements.txt -> Python bağımlılıkları
 ```bash
 git clone https://github.com/cigdemdavutoglu/ecommerce-data-pipeline.git
 cd ecommerce-data-pipeline
+```
 
 2. Sanal bir Python ortamı oluşturun ve aktive edin:
-
+```bash
 python3 -m venv venv
 source venv/bin/activate
-
+```
 3. Gerekli Python paketlerini yükleyin:
-
+```bash
 pip install -r requirements.txt
-
+```
 4. Tüm servisleri Docker Compose ile başlatın:
-
+```bash
 docker-compose up -d
-
+```
 5. Tarayıcı üzerinden Airflow arayüzüne erişin:
 
 http://localhost:1502
 
 6. spark_streaming_dag DAG’ını etkinleştirin ve tetikleyin. Spark uygulaması Kafka’dan verileri okuyup PostgreSQL’e yazacaktır.
-```
+
 ---
 
 ## CI/CD ve Docker Hub
@@ -91,10 +92,10 @@ Docker Hub kullanıcı adı: `cigdemdavutoglu`
 
 > Not: “Inactive” durumu, image’ın henüz container olarak çalışmadığını gösterir. Image’ları çekip çalıştırabilirsiniz:  
 
-
+```bash
 docker pull cigdemdavutoglu/producer:latest
 docker run -it cigdemdavutoglu/producer:latest
-
+```
 ---
 
 ## Ne İşe Yarar?
