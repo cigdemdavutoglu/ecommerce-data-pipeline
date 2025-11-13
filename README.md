@@ -28,11 +28,17 @@ Bu proje, Apache Spark Streaming ile Apache Kafka’yı entegre ederek gerçek z
 ## Dosya Yapısı
 
 dags/ -> Airflow DAG dosyaları
+
 src/ -> Python scriptleri (producer, consumer, Spark job, Kafka->Postgres)
+
 docker/ -> Her servis için Dockerfile’lar
+
 tests/ -> Unit testler
+
 docker-compose.yml -> Tüm servislerin lokal olarak çalıştırılması
+
 .github/workflows/ -> CI/CD workflow dosyaları (docker-publish.yml)
+
 requirements.txt -> Python bağımlılıkları
 
 ---
@@ -45,28 +51,28 @@ requirements.txt -> Python bağımlılıkları
 git clone https://github.com/cigdemdavutoglu/ecommerce-data-pipeline.git
 cd ecommerce-data-pipeline
 
-2.Sanal bir Python ortamı oluşturun ve aktive edin:
+2. Sanal bir Python ortamı oluşturun ve aktive edin:
 
 python3 -m venv venv
 source venv/bin/activate
 
-3.Gerekli Python paketlerini yükleyin:
+3. Gerekli Python paketlerini yükleyin:
 
 pip install -r requirements.txt
 
-4.Tüm servisleri Docker Compose ile başlatın:
+4. Tüm servisleri Docker Compose ile başlatın:
 
 docker-compose up -d
 
-5.Tarayıcı üzerinden Airflow arayüzüne erişin:
+5. Tarayıcı üzerinden Airflow arayüzüne erişin:
 
 http://localhost:1502
 
-6.spark_streaming_dag DAG’ını etkinleştirin ve tetikleyin. Spark uygulaması Kafka’dan verileri okuyup PostgreSQL’e yazacaktır.
+6. spark_streaming_dag DAG’ını etkinleştirin ve tetikleyin. Spark uygulaması Kafka’dan verileri okuyup PostgreSQL’e yazacaktır.
 
 ---
 
-CI/CD ve Docker Hub
+### CI/CD ve Docker Hub
 
 Bu proje, GitHub Actions kullanarak Docker image’larını otomatik olarak build ve Docker Hub’a push eder.
 
@@ -88,7 +94,7 @@ docker run -it cigdemdavutoglu/producer:latest
 
 ---
 
-Ne İşe Yarar?
+### Ne İşe Yarar?
 
 src/producer.py: Kafka’ya örnek veri gönderir
 
