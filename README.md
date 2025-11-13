@@ -72,7 +72,7 @@ http://localhost:1502
 
 ---
 
-### CI/CD ve Docker Hub
+###  CI/CD ve Docker Hub
 
 Bu proje, GitHub Actions kullanarak Docker image’larını otomatik olarak build ve Docker Hub’a push eder.
 
