@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - main  # veya ana branch’in
+      - main  # veya senin ana branch’in
 
 jobs:
   build-and-push:
