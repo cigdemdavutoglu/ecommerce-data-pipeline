@@ -76,19 +76,21 @@ http://localhost:1502
 
 Bu proje, GitHub Actions kullanarak Docker image’larını otomatik olarak build ve Docker Hub’a push eder.
 
-Workflow dosyası: .github/workflows/docker-publish.yml
+Workflow dosyası: `.github/workflows/docker-publish.yml`  
 
-Docker Hub kullanıcı adı: cigdemdavutoglu
+Docker Hub kullanıcı adı: `cigdemdavutoglu`  
 
-Public Docker image’lar:
+**Public Docker image’lar:**
 
-Servis	Docker Hub Image
-Producer	cigdemdavutoglu/producer
-Consumer	cigdemdavutoglu/consumer
-Spark Kafka Streaming	cigdemdavutoglu/spark-kafka-streaming
-Kafka to Postgres	cigdemdavutoglu/kafka-to-postgres
+| Servis                | Docker Hub Image                         |
+|-----------------------|-----------------------------------------|
+| Producer              | `cigdemdavutoglu/producer`             |
+| Consumer              | `cigdemdavutoglu/consumer`             |
+| Spark Kafka Streaming | `cigdemdavutoglu/spark-kafka-streaming`|
+| Kafka to Postgres     | `cigdemdavutoglu/kafka-to-postgres`    |
 
-Not: “Inactive” durum, image’ın henüz container olarak çalışmadığını gösterir. Image’ları çekip çalıştırabilirsiniz:
+> Not: “Inactive” durumu, image’ın henüz container olarak çalışmadığını gösterir. Image’ları çekip çalıştırabilirsiniz:  
+```bash
 docker pull cigdemdavutoglu/producer:latest
 docker run -it cigdemdavutoglu/producer:latest
 
