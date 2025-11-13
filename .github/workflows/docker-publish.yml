@@ -1,28 +1,47 @@
-name: Build and Push Docker Image
+name: Build and Push Docker Images
 
 on:
   push:
     branches:
-      - main  # veya senin ana branch’in
+      - main
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
 
     steps:
+      # Repo’yu checkout et
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # Docker Hub’a login ol
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build Docker image
+      # Producer Docker image build & push
+      - name: Build & Push Producer Image
         run: |
-          docker build -t cigdemdavutoglu/ecommerce-pipeline:latest .
+          docker build -t cigdemdavutoglu/producer:latest -f docker/producer/Dockerfile .
+          docker push cigdemdavutoglu/producer:latest
 
-      - name: Push Docker image
+      # Consumer Docker image build & push
+      - name: Build & Push Consumer Image
         run: |
-          docker push cigdemdavutoglu/ecommerce-pipeline:latest
+          docker build -t cigdemdavutoglu/consumer:latest -f docker/consumer/Dockerfile .
+          docker push cigdemdavutoglu/consumer:latest
+
+      # Spark Kafka Streaming Docker image build & push
+      - name: Build & Push Spark Kafka Streaming Image
+        run: |
+          docker build -t cigdemdavutoglu/spark-kafka-streaming:latest -f docker/spark_kafka_streaming/Dockerfile .
+          docker push cigdemdavutoglu/spark-kafka-streaming:latest
+
+      # Kafka to Postgres Docker image build & push
+      - name: Build & Push Kafka to Postgres Image
+        run: |
+          docker build -t cigdemdavutoglu/kafka-to-postgres:latest -f docker/kafka_to_postgres/Dockerfile .
+          docker push cigdemdavutoglu/kafka-to-postgres:latest
+
