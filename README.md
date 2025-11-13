@@ -47,7 +47,7 @@ requirements.txt -> Python bağımlılıkları
 
 1. Repo’yu klonlayın:
 
-```bash
+
 git clone https://github.com/cigdemdavutoglu/ecommerce-data-pipeline.git
 cd ecommerce-data-pipeline
 
@@ -90,7 +90,8 @@ Docker Hub kullanıcı adı: `cigdemdavutoglu`
 | Kafka to Postgres     | `cigdemdavutoglu/kafka-to-postgres`    |
 
 > Not: “Inactive” durumu, image’ın henüz container olarak çalışmadığını gösterir. Image’ları çekip çalıştırabilirsiniz:  
-```bash
+
+
 docker pull cigdemdavutoglu/producer:latest
 docker run -it cigdemdavutoglu/producer:latest
 
